@@ -4,7 +4,9 @@
       <div class="col-md-8 col-md-offset-2 text-center inner">
         <div class="col-sm-6 col-sm-offset-3">
             <h1><span class="fa fa-sign-in"></span> Login</h1>
-
+            <span class="error" ng-show="errorMessage != null"> 
+            Något har gott fel var god försök igen! <br />
+            {{errorMessage}}<br /></span>
             <form class="simple-form" name="loginForm">
                 <div class="form-group">
                     <label>Email</label>
@@ -29,7 +31,7 @@
             
             <hr>
             <p>Skapa ett <a href="/signup">konto</a></p>
-            <p class="">eller inte.</p>
+            <p class="min">eller inte.</p>
         </div>
       </div>
     </div>

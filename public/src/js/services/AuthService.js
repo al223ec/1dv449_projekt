@@ -13,14 +13,12 @@ angular.module('AuthService', []).factory('AuthService', ['$rootScope', '$http',
             request.error(function(data, status, headers, config){
                 if(data == "Unauthorized"){
                     //felaktiga uppgifter
-                    console.log("felaktiga uppgifter"); 
                     failCallback(); 
                 }
             }); 
 
             request.then(function (response) {
                 var data = response.data; 
-                console.log(data); 
                 if (data.loginOk === true){
                     user.isAuthenticated = true;
                     user.data = data.user; 

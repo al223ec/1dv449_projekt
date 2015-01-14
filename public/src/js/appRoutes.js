@@ -1,5 +1,6 @@
-angular.module('appRoutes', []).config(['$routeProvider','$httpProvider', '$locationProvider', 
-    function($routeProvider, $httpProvider, $locationProvider) {
+angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', 
+    function($routeProvider, $locationProvider) {
+        
         function checkLoggedIn($q, $log, AuthService) {
             var deferred = $q.defer();
 
@@ -54,6 +55,5 @@ angular.module('appRoutes', []).config(['$routeProvider','$httpProvider', '$loca
                 })
                 .otherwise({redirectTo: '/'});
         // to configure how the application deep linking paths are stored.
-        $locationProvider.html5Mode(true); 
-       // $httpProvider.interceptors.push('processErrorHttpInterceptor');
+        $locationProvider.html5Mode(true);         
 }]);
