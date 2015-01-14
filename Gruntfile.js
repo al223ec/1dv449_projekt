@@ -18,6 +18,7 @@ grunt.initConfig({
     cssmin: {
       build: {
         files: {
+          'public/dist/css/bootstrap.min.css': 'public/src/css/bootstrap.css',
           'public/dist/css/style.min.css': 'public/src/css/style.css',
           'public/dist/css/navigation.min.css': 'public/src/css/navigation.css',
         }
