@@ -22,31 +22,36 @@ app.run(['$location', '$rootScope', '$log', 'AuthService', '$route', '$http',
 	        }
 	    });
 
-	    //För att kontrollera om användaren har internet access
+	    //För att kontrollera om användaren har tillgång till servern
 		var ping = function(){
 			$http.get('/api'); 
 		}
-	    setInterval(ping, 15000);
+	    setInterval(ping, 20000);
 }]); 
 
 app.factory('errorInterceptor', ['$q', '$rootScope', 
     function ($q, $rootScope) {
+
+
        return {
 		    'response': function(response) {
-		    		$rootScope.offline = true;
-		   		
 		      // do something on success
 		      return response;
 		    },
 		   'responseError': function(rejection) {
-		   		console.log(rejection.status); 
-		   		if(rejection.status === 0){
+		   		//408: Request Timeout 418: I'm a teapot
+		   		if(rejection.status === 0 || rejection.status === 408 || rejection.status === 500){ 
 					//OMG, offline
+		   			//Detta är rent fullt
+		   			window.onbeforeunload = function() {
+				        return "Du har ingen kontakt med server
+				        om du uppdaterar sidan kommer data att försvinna"; 
+					}
 		   			$rootScope.offline = true;
 		   		} else {
-		   			//$rootScope.offline = false; 
+		   			window.onbeforeunload = null; 
+		   			$rootScope.offline = false; 
 		   		}
-
 		      return $q.reject(rejection);
 		    }
 		  };
