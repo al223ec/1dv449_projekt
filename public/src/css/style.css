@@ -17,7 +17,7 @@ body {
     font-family: 'Varela Round', sans-serif; 
     color: #353638; 
 
-    background-image: url('../src/img/bg_color.jpg');
+background-image: url('/src/img/bg_color.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: #ddd;
