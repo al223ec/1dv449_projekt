@@ -31,8 +31,6 @@ app.run(['$location', '$rootScope', '$log', 'AuthService', '$route', '$http',
 
 app.factory('errorInterceptor', ['$q', '$rootScope', 
     function ($q, $rootScope) {
-
-
        return {
 		    'response': function(response) {
 		      // do something on success
@@ -41,15 +39,8 @@ app.factory('errorInterceptor', ['$q', '$rootScope',
 		   'responseError': function(rejection) {
 		   		//408: Request Timeout 418: I'm a teapot
 		   		if(rejection.status === 0 || rejection.status === 408 || rejection.status === 500){ 
-					//OMG, offline
-		   			//Detta är rent fullt
-		   			window.onbeforeunload = function() {
-				        return "Du har ingen kontakt med server
-				        om du uppdaterar sidan kommer data att försvinna"; 
-					}
-		   			$rootScope.offline = true;
+					$rootScope.offline = true;
 		   		} else {
-		   			window.onbeforeunload = null; 
 		   			$rootScope.offline = false; 
 		   		}
 		      return $q.reject(rejection);

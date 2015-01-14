@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html manifest="/cache.manifest">
 <head>
     <!-- you need to specify the base URL for the application with a <base href=""> tag or configure $locationProvider -->
     <base href="/">
@@ -30,13 +30,13 @@
             </nav>
         </div><!-- /container -->
         <div class="offline-message text-center">
-       <span class="error offline" ng-show="$root.offline == true"> 
+       <span class="error offline" ng-show="$root.offline === true"> 
        Du är nu offline, inget nytt data kan hämtas men all data som har hämtats kan användas</span>
     </div>
     <!-- JS -->
-    <script src="src/libs/angular/angular.min.js"></script>
-    <script src="src/libs/angular-route/angular-route.min.js"></script>
-    <script src="src/libs/angular-animate/angular-animate.min.js"></script>
+    <script src="dist/js/angular.min.js"></script>
+    <script src="dist/js/angular-route.min.js"></script>
+    <script src="dist/js/angular-animate.min.js"></script>
     <script src="dist/js/jquery.min.js" ></script>
 
     <!-- MY LIBS -->

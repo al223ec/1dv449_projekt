@@ -1,0 +1,26 @@
+CACHE MANIFEST
+/dist/css/bootstrap.min.css
+/dist/css/navigation.min.css
+/dist/css/style.min.css
+
+/dist/js/angular-animate.min.js
+/dist/js/angular-route.min.js
+/dist/js/angular.min.js
+/dist/js/app.min.js
+/dist/js/jquery.min.js
+/dist/js/my_libs.min.js
+
+/src/img/bg_color.jpg
+/src/img/tweet_marker.png
+/src/img/twitter_icon.png
+
+/views/home.html
+/views/login.html
+/views/profile.html
+/views/signup.html
+/views/twitter.html
+
+/index.html
+
+NETWORK: 
+*
