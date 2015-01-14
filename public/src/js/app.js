@@ -1,7 +1,6 @@
 angular.module('twitterApp', [
 	'ngRoute', 
 	'ngAnimate',
-	'ngDialog', //Tänkt att användas till att visa tweets från twitter men saknar tid att impementera
 	'appRoutes', 
 	'MainCtrl', 
 	'TwitterCtrl', 

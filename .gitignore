@@ -220,5 +220,5 @@ pip-log.txt
 #############
 
 node_modules
-public/libs
+public/src/libs
 

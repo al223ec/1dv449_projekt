@@ -148,7 +148,7 @@ angular.module('MapService', []).factory('Map', ['App','$rootScope', function(Ap
 		ret += '<div id="content">'+ getHtmlStringTag("h1", query.locations.name);
 		for(var i = 0; i < query.trends.length; i++){
 			ret += getHtmlStringTag("li", query.trends[i].name + 
-				'<a href="'+ query.trends[i].url +'"> <span class="twitter-link">| sök på </span><img alt="twitter-icon" src="../img/twitter_icon.png"> </a>'); 
+				'<a href="'+ query.trends[i].url +'"> <span class="twitter-link">| sök på </span><img alt="twitter-icon" src="../src/img/twitter_icon.png"> </a>'); 
 		} 
 		return ret; 
 
@@ -163,7 +163,7 @@ angular.module('MapService', []).factory('Map', ['App','$rootScope', function(Ap
 			position: latLng,
 			map: map,
 			title: query.locations.name,
-			icon: '../img/tweet_marker.png',     
+			icon: '../src/img/tweet_marker.png',     
 			draggable:true,
 		});
 

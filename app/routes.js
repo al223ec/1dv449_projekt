@@ -114,15 +114,13 @@ module.exports = function(app, passport) {
                 });
             }
             user.trendQueries.push(trendQuery); 
-            console.log(user); 
-            console.log(trendQuery); 
 
             var id = user._id;
             delete user._id;
             if (id) {
                 User.update({_id: id}, user, {upsert: true}, function (err) {
                     if (err){
-                        //res.send(err);
+                        res.send(err);
                     }
                 });
             }
