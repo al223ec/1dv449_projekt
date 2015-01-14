@@ -11,6 +11,7 @@ grunt.initConfig({
         files: {
           'public/dist/js/app.min.js': ['public/src/js/**/*.js', 'public/src/js/*.js'],
           'public/dist/js/my_libs.min.js': 'public/src/my_libs/*.js',
+          'public/dist/js/jquery.min.js': 'public/src/js_libs/jquery.js',
         }
       }
     },
