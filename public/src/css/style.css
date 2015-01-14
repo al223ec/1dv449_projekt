@@ -17,7 +17,7 @@ body {
     font-family: 'Varela Round', sans-serif; 
     color: #353638; 
 
-    background-image: url('../img/bg_color.jpg');
+    background-image: url('../src/img/bg_color.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: #ddd;
@@ -63,6 +63,11 @@ a:hover, a:focus {
 }
 .min{
     font-size: 10px;
+}
+.offline-message{
+    top: 10px; left: 10px; z-index: 99;
+    position: absolute;
+    margin: 0 auto;
 }
 /* ==========================================================================
     Hero

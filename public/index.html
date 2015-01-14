@@ -29,8 +29,10 @@
                 </ul>
             </nav>
         </div><!-- /container -->
-</div>
-
+        <div class="offline-message text-center">
+       <span class="error offline" ng-show="$root.offline == true"> 
+       Du är nu offline, inget nytt data kan hämtas men all data som har hämtats kan användas</span>
+    </div>
     <!-- JS -->
     <script src="src/libs/angular/angular.min.js"></script>
     <script src="src/libs/angular-route/angular-route.min.js"></script>

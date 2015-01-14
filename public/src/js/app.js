@@ -9,9 +9,6 @@ var app = angular.module('twitterApp', [
 	'AuthService',
 	'AppService',	
 	'MapService',
-	function(){
-
-	}
 ]);
 
 app.run(['$location', '$rootScope', '$log', 'AuthService', '$route', '$http', 
@@ -36,6 +33,8 @@ app.factory('errorInterceptor', ['$q', '$rootScope',
     function ($q, $rootScope) {
        return {
 		    'response': function(response) {
+		    		$rootScope.offline = true;
+		   		
 		      // do something on success
 		      return response;
 		    },
@@ -43,7 +42,11 @@ app.factory('errorInterceptor', ['$q', '$rootScope',
 		   		console.log(rejection.status); 
 		   		if(rejection.status === 0){
 					//OMG, offline
-		   		} 
+		   			$rootScope.offline = true;
+		   		} else {
+		   			//$rootScope.offline = false; 
+		   		}
+
 		      return $q.reject(rejection);
 		    }
 		  };

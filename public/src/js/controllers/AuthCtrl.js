@@ -5,6 +5,7 @@ angular.module('AuthCtrl', []).controller('AuthController', ['$scope', 'AuthServ
     $scope.user = { email : "", password : "" }; 
     $scope.errorMessage = null; 
 
+
     $scope.login = function(){ 
     	if($scope.loginForm.$valid === true){
 	 		AuthService.login($scope.user, wrongLoginCredentials); 
