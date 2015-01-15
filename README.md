@@ -1,5 +1,11 @@
 # 1dv449_projekt
 Projekt i kursen webbteknik 2
+---------------
+login UN: user@mail.com PW: password<br>
+
+
+
+
 
 Tvungen att ha detta projekt i ett enskilt repo, 
 tidigare commits finns på github https://github.com/al223ec/1DV449_al223ec/tree/master/projekt
