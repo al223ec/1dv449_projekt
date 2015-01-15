@@ -12,6 +12,10 @@ https://www.youtube.com/watch?v=wxwAsASt4Vo&feature=youtu.be
 ---------
 Videon hade lite lågt ljud, säger också fel angående offline sidan cachas via manifest man behöver inte ha tittat på sidorna tidigare. Det är googles karta som endast cachas om man tittar på den först.
 
+Rapport
+------------
+https://github.com/al223ec/1dv449_projekt/blob/master/Rapport_projekt.md
+
 Tvungen att ha detta projekt i ett enskilt repo, 
 tidigare commits finns på github https://github.com/al223ec/1DV449_al223ec/tree/master/projekt
 
