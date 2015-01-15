@@ -2,10 +2,15 @@
 Projekt i kursen webbteknik 2
 ---------------
 login UN: user@mail.com PW: password<br>
+Man ska högerklicka på kartan<br>
+antonledstrom.se<br>
 
+Om man är inloggad permanent på facebook i sin webbläsare kan det bli buggar med att logga ut, man blir bara utloggad tillfälligt vid nya request till servern blir man inloggad via facebook kakorna.  
 
-
-
+Film muntlig redovisning
+https://www.youtube.com/watch?v=wxwAsASt4Vo&feature=youtu.be
+---------
+Videon hade lite lågt ljud, säger också fel angående offline sidan cachas via manifest man behöver inte ha tittat på sidorna tidigare. Det är googles karta som endast cachas om man tittar på den först.
 
 Tvungen att ha detta projekt i ett enskilt repo, 
 tidigare commits finns på github https://github.com/al223ec/1DV449_al223ec/tree/master/projekt
