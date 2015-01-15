@@ -1,5 +1,4 @@
 angular.module('MainCtrl', []).controller('MainController', ['$scope', 'Map', function($scope, map) {
-    $scope.tagline = 'To the moon and back!';
     map.create(); 
 
     //Möjligt att detta är det fulaste jag gjort, tar bort scrollmöjligheten när man visar karatan

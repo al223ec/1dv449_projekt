@@ -1,4 +1,4 @@
-//var TrendQuery = require('./models/trend_query');
+    //var TrendQuery = require('./models/trend_query');
 var TwitterService = require('./services/twitter_service');
 var User = require('./models/user');
 
@@ -63,6 +63,7 @@ module.exports = function(app, passport) {
     app.get('/api/', function(req, res) {
         res.json({ message: 'Api:et är vid liv!' }); 
     });
+    /*
     app.get('/api/trends', function(req, res){
             TrendQuery.find(function(err, trendQueries) {
                 if (err){
@@ -71,6 +72,7 @@ module.exports = function(app, passport) {
                 res.json(trendQueries);
             });
          });
+    */
 
     app.get('/api/trends/:lat/:lng', isLoggedIn, function(req, res){
             //console.log(req.user); 
